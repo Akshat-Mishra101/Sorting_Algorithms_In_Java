@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sortingalgorithms;
+package Algorithms;
+
+import sortingalgorithms.DataType;
+import sortingalgorithms.Sorter;
+import sortingalgorithms.SortingStrategy;
 
 /**
  *
@@ -41,6 +45,21 @@ public class SelectionSort implements Sorter {
           else if(data_type==DataType.STR)
           {
           
+              if(sorting_strategy==SortingStrategy.BY_LENGTH_ASCENDING)
+              {
+                  if(data[j].toString().length()<data[min_index].toString().length())
+                  {
+                  min_index=j;
+                  }
+                      
+              }
+              else if(sorting_strategy==SortingStrategy.BY_LENGTH_DESCENDING)
+              {
+                  if(data[j].toString().length()>data[min_index].toString().length())
+                  {
+                  min_index=j;
+                  }
+              }
           
           }
        }

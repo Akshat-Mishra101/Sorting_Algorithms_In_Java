@@ -5,6 +5,7 @@
  */
 package sortingalgorithms;
 
+import Algorithms.SelectionSort;
 import java.util.stream.Stream;
 
 /**
@@ -24,7 +25,7 @@ public class SortingAlgorithms {
      //  sorter.sort();
        
        
-       Sorter sorter2=new SelectionSort(Integer_Array,DataType.INT,SortingStrategy.BY_SIZE_DESCENDING);
+       Sorter sorter2=new SelectionSort(srt_Array,DataType.STR,SortingStrategy.BY_LENGTH_ASCENDING);
        sorter2.sort();
        Stream.of(sorter2.getSortedArray()).forEach(System.out::println);
     }
